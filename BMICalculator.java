@@ -3,11 +3,18 @@ import java.util.Scanner;
 public class BMICalculator {
   public static void main( String[] args ) {
     Scanner keyboard = new Scanner(System.in);
-    double lb, in, m, kg, bmi;
+    double lb, m, totIn, kg, bmi;
+    int ft, in;
 
-    System.out.print( "Your height in inches: " );
-    in = keyboard.nextDouble();
-    m = in*0.0254;
+    System.out.print( "Your height in feet: "  );
+    ft = keyboard.nextInt();
+    System.out.print( " and inches: " );
+    in = keyboard.nextInt();
+    //how do I get feet & inches on one line?
+
+    totIn = ft*12+in;
+
+    m = totIn*0.0254;
 
     System.out.print( "Your weight in lbs: " );
     lb = keyboard.nextDouble();
